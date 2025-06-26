@@ -33,13 +33,12 @@ document.getElementById('task-form').addEventListener('submit', function (e) {
   let category = categorySelect.value;
   if (category === 'inna') {
     category = customCategoryInput.value.trim();
-    if (!category) return; // Nie pozwól dodać zadania bez nazwy kategorii
+    if (!category) return;
   }
 
   const taskText = input.value.trim();
   const priority = prioritySelect.value;
-  const dueDatetime = dueDatetimeInput.value; // ISO format yyyy-MM-ddTHH:mm
-
+  const dueDatetime = dueDatetimeInput.value;
   if (!taskText || !dueDatetime) return;
 
   const dueDate = new Date(dueDatetime);

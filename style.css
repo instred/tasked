@@ -66,7 +66,6 @@ select {
   box-sizing: border-box;
 }
 
-/* Styl tagów priorytetów */
 .priority {
   font-weight: bold;
   padding: 0.25rem 0.5rem;
