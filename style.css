@@ -1,32 +1,142 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 2rem;
-  background: #f4f4f4;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom right, #f0f4ff, #dbe4f3);
+  min-height: 100vh;
 }
-h1 {
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 1rem;
+}
+
+header {
   text-align: center;
+  margin-bottom: 2rem;
 }
+
+.logo {
+  width: 64px;
+  height: 64px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: #317EFB;
+}
+
 form {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
   margin-bottom: 1rem;
 }
+
 input {
-  width: 70%;
-  padding: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
+
 button {
-  padding: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background: #317EFB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
 }
+
+button:hover {
+  background: #255dcf;
+}
+
+select {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Styl tagów priorytetów */
+.priority {
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.priority.wysoki {
+  background-color: #e74c3c;
+}
+
+.priority.sredni {
+  background-color: #f39c12;
+}
+
+.priority.niski {
+  background-color: #27ae60;
+}
+
+.category {
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-left: 0.5rem;
+  color: #666;
+}
+
+
 ul {
   list-style: none;
   padding: 0;
 }
+
 li {
   background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   padding: 0.75rem;
-  margin: 0.5rem 0;
+  margin-bottom: 0.75rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  background: #ff4d4d;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 0.75rem;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+li button:hover {
+  background: #cc0000;
+}
+
+@media (min-width: 600px) {
+  form {
+    flex-direction: row;
+  }
+
+  input {
+    flex: 1;
+  }
+
+  button {
+    width: auto;
+  }
 }

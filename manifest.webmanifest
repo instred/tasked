@@ -1,5 +1,5 @@
 {
-  "name": "Tasked",
+  "name": "Tasked - Lista Zadań",
   "short_name": "Tasked",
   "start_url": "/",
   "display": "standalone",
@@ -7,8 +7,13 @@
   "theme_color": "#317EFB",
   "icons": [
     {
-      "src": "icons/t.png",
+      "src": "icons/logo.png",
       "sizes": "192x192",
+      "type": "image/png"
+    },
+      {
+      "src": "icons/reminder.png",
+      "sizes": "256x256",
       "type": "image/png"
     }
   ]

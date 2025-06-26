@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tasked</title>
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="style.css">
-  <meta name="theme-color" content="#317EFB"/>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#317EFB" />
 </head>
 <body>
-  <h1>Tasked</h1>
-  <form id="task-form">
-    <input type="text" id="task-input" placeholder="Dodaj nowe zadanie" required />
-    <button type="submit">Dodaj</button>
-  </form>
-  <ul id="task-list"></ul>
+  <div class="container">
+    <header>
+      <img src="icons/logo.png" alt="Tasked logo" class="logo" />
+      <h1>Tasked</h1>
+    </header>
+
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="Dodaj nowe zadanie..." required />
+
+        <select id="category-select">
+          <option value="praca">Praca</option>
+          <option value="dom">Dom</option>
+          <option value="nauka">Nauka</option>
+          <option value="inna">Inna</option>
+        </select>
+
+        <input type="text" id="custom-category-input" placeholder="Wpisz własną kategorię..." style="display:none; margin-top:0.5rem; padding:0.75rem; font-size:1rem; border: 2px solid #ccc; border-radius: 5px;" />
+
+
+        <select id="priority-select">
+          <option value="niski">Niski</option>
+          <option value="sredni">Średni</option>
+          <option value="wysoki">Wysoki</option>
+        </select>
+
+        <label for="due-datetime">Data i godzina przypomnienia:</label>
+        <input type="datetime-local" id="due-datetime" required />
+
+        <button type="submit">Dodaj</button>
+      </form>
+
+
+
+    <ul id="task-list"></ul>
+  </div>
 
   <script src="app.js"></script>
 </body>
